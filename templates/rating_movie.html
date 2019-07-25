@@ -1,0 +1,39 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+    <div class="container" style="width: 60%; border:1px solid black; margin-top: 2%; margin-bottom: 2%;
+            background: white; padding-top: 2%;">
+        <h2 class="text-center">Rating Movie</h2>
+        <form role="form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="form-group">
+                        <label class="upper" for="{{ form.movie.name }}">{{ form.movie.label }}</label>
+                        {{ form.movie }}
+                    </div>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="form-group">
+                        <label class="upper" for="{{ form.rating.name }}">{{ form.rating.label }}</label>
+                        {{ form.rating }}
+                    </div>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="form-group">
+                        <label class="upper" for="{{ form.comment.name }}">{{ form.comment.label }}</label>
+                        {{ form.comment }}
+                    </div>
+                </div>
+                <hr style="width:75%; border-color: black">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="form-group text-center">
+                        <button class="btn btn-primary text-uppercase"
+                                type="submit"><i class="fa fa-send mr-2"></i> SEND
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

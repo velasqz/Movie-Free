@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+    <!-- banner -->
+    {% if request.user.is_superuser %}
+
+        <h3>Search your Movies</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="query" placeholder="Search" required="">
+            <input type="submit" value="Go!">
+        </form>
+    {% else %}
+        <br><br><br><br>
+        <h2 style="text-align: center">Pagina No Valida</h2>
+    {% endif %}
+    <!-- //banner -->
+{% endblock %}

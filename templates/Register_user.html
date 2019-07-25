@@ -1,0 +1,40 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block  content %}
+    <section id="intro">
+        <header class="masthead padding-1">
+            <div class="container masthead-content">
+                <div class="row">
+                    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                        <div class="card card-signin my-5">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Register</h5>
+                                <form class="form-signin" method="post">
+                                    {% csrf_token %}
+                                    <div class="form-label-group">
+                                        <label for="id_username">Username</label>
+                                        <input id='id_username' class="form-control" type="text" name="username">
+                                    </div>
+                                    <div class="form-label-group">
+                                        <label for="id_password1">Password</label>
+                                        <input id='id_password1' class="form-control" type="password" name="password1">
+                                    </div>
+                                    <div class="form-label-group">
+                                        <label for="id_password2">Password Confirmation</label>
+                                        <input id='id_password2' class="form-control" type="password" name="password2">
+                                    </div>
+                                    <br>
+                                    <button class="btn btn-lg btn-secondary btn-block text-uppercase"
+                                            type="submit"><i class="fa fa-save mr-2"></i>Save
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+{% endblock %}
+{% block footer %}
+{% endblock %}

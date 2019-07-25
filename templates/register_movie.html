@@ -1,0 +1,101 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+    <div class="container" style="background-image: url({% static 'image/asd.jpg' %}); width: 100%; height: 100%;">
+        <div class="container" style="width: 60%; border:1px solid black; margin-top: 2%; margin-bottom: 2%;
+            background: white; padding-top: 2%;">
+            <h2 class="text-center">Register Movie</h2>
+            <form role="form" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <label class="upper" style="color: white"
+                                   for="{{ form.title.name }}">{{ form.title.label }}</label>
+                            {{ form.title }}
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <label class="upper"
+                                   for="{{ form.duration.name }}">{{ form.duration.label }}</label>
+                            {{ form.duration }}
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <label class="upper"
+                                   for="{{ form.poster.name }}">{{ form.poster.label }}</label>
+                            <input type="file" name="poster" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <label class="upper"
+                                   for="{{ form.detail.name }}">{{ form.detail.label }}</label>
+                            {{ form.detail }}
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <label class="upper" for="trailer_url">Trailer Url</label>
+                            <input type="url" name="trailer_url" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <label class="upper"
+                                   for="{{ form.genre.name }}">{{ form.genre.label }}</label>
+                            {{ form.genre }}
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <label class="upper"
+                                   for="{{ form.original_language.name }}">{{ form.original_language.label }}</label>
+                            {{ form.original_language }}
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <label class="upper"
+                                   for="{{ form.release_date.name }}">{{ form.release_date.label }}</label>
+                            {{ form.release_date }}
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <label class="upper"
+                                   for="{{ form.country.name }}">{{ form.country.label }}</label>
+                            {{ form.country }}
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <label class="upper"
+                                   for="{{ form.directors.name }}">{{ form.directors.label }}</label>
+                            {{ form.directors }}
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <label class="upper"
+                                   for="{{ form.actors.name }}">{{ form.actors.label }}</label>
+                            {{ form.actors }}
+                        </div>
+                    </div>
+                    <hr style="width:75%; border-color: black">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group text-center">
+                            <button class="btn btn-primary text-uppercase"
+                                    type="submit"><i class="fa fa-save mr-2"></i>Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+{% endblock %}

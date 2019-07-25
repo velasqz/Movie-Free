@@ -1,0 +1,27 @@
+movie_genre=(
+    ('Teen cinema','Teen cinema'),
+    ('Cinema art','Cinema art'),
+    ('BDSM cinema','BDSM cinema'),
+    ('War movies','War movies'),
+    ('Gangster cinema','Gangster cinema'),
+    ('Cinema catastrophe','Cinema catastrophe'),
+    ('Costumbrista cinema','Costumbrista cinema'),
+    ('Christian cinema','Christian cinema'),
+    ('Action cinema','Action cinema'),
+    ('Animation film','Animation film'),
+    ('Adventure Movies','Adventure Movies'),
+    ('Science fiction movies','Science fiction movies'),
+    ('Mystery cinema','Mystery cinema'),
+    ('Samurai cinema','Samurai cinema'),
+    ('Horror movies','Horror movies'),
+    ('Documentary film','Documentary film'),
+    ('Epic cinema','Epic cinema'),
+    ('Erotic cinema (not pornographic)','Erotic cinema (not pornographic)'),
+    ('Experimental cinema','Experimental cinema'),
+    ('Fantastic movies','Fantastic movies'),
+    ('Fetish cinema','Fetish cinema'),
+    ('Historical cinema','Historical cinema'),
+    ('Musical cinema','Musical cinema'),
+)
+
+movie_rating = list(zip(range(1, 11), range(1, 11)))
